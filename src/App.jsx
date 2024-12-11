@@ -1,38 +1,13 @@
-import "./App.css";
-import { NavLink } from "react-router";
-import useData from "./hooks/useData";
-import { useEffect } from "react";
-import LoadingPage from "./pages/LoadingPage/LoadingPage";
+import { Outlet } from "react-router";
+import TopBar from "./components/TopBar/TopBar";
 
-function App() {
-  const { pokemons, getPokemons, isLoading } = useData();
-
-  useEffect(() => {
-    getPokemons();
-  }, []);
-
-  const renderedPokemons =
-    pokemons.length > 0
-      ? pokemons.map((pokemon, index) => {
-          return (
-            <NavLink to={`/pokemon/${pokemon.name}`} key={index}>
-              {pokemon.name} <br />
-            </NavLink>
-          );
-        })
-      : [];
-
-  return isLoading ? (
-    <LoadingPage />
-  ) : (
+export default function App() {
+  return (
     <div>
-      pokedex
-      <NavLink to="/pokemon/1">pokemon</NavLink>
-      <br />
-      <br />
-      {renderedPokemons}
+      <div>
+        <TopBar />
+      </div>
+      <Outlet />
     </div>
   );
 }
-
-export default App;

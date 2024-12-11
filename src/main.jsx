@@ -2,16 +2,29 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import Pokemon from "./pages/Pokemon/Pokemon.jsx";
+import HomePage from "./pages/HomePage/HomePage.jsx";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "/pokemon/:name",
+        element: <Pokemon />,
+      },
+    ],
+  },
+]);
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <StrictMode>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/pokemon/:name" element={<Pokemon />} />
-      </Routes>
-    </StrictMode>
-  </BrowserRouter>
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>
 );

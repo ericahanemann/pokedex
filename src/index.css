@@ -3,7 +3,9 @@
   --primary-color: #f0f0f0;
   --secondary-color: #000;
   --highlights-color: #b6b6b6;
+  --highlights-shadow-color: #b6b6b68c;
   --light-effect-color: #fff;
+  --light-effect-shadow-color: #ffffff7a;
 }
 
 * {
