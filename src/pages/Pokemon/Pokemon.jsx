@@ -12,8 +12,6 @@ export default function Pokemon() {
     getPokemonByName(name);
   }, []);
 
-  isLoading ? console.log("carregando") : console.log(pokemonRequired);
-
   return isLoading ? (
     <LoadingPage />
   ) : (

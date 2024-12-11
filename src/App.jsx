@@ -22,8 +22,6 @@ function App() {
         })
       : [];
 
-  isLoading ? console.log("carregando") : console.log(pokemons);
-
   return isLoading ? (
     <LoadingPage />
   ) : (

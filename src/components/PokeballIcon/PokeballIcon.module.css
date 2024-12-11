@@ -1,0 +1,113 @@
+@import url("../../index.css");
+
+.iconContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.upperHalfExternalCircle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: var(--secondary-color);
+  border-radius: 50% 50% 0 0;
+}
+
+.middleStripe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 8%;
+  z-index: 98;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: var(--primary-color);
+}
+
+.internalCircleContainer {
+  position: absolute;
+  height: 40%;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  z-index: 98;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 100%;
+  background-color: var(--primary-color);
+}
+
+.internalCircle {
+  position: absolute;
+  height: 70%;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 100%;
+  background-color: var(--secondary-color);
+}
+
+.internalCircle::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  border-radius: 100%;
+  background-color: var(--light-effect-color);
+  box-shadow: 20px 0 32px var(--light-effect-color),
+    -20px 0 32px var(--light-effect-color),
+    0 -20px 32px var(--light-effect-color),
+    0 20px 32px var(--light-effect-color);
+  opacity: 0;
+
+  transition: all 0.25s;
+  transform: translateX(-50%) translateY(-50%);
+  animation: lightPulse 4s infinite;
+}
+
+.internalCircle:hover::after {
+  opacity: 1;
+}
+
+.bottomHalfExternalCircle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: var(--highlights-color);
+  border-radius: 0 0 50% 50%;
+}
+
+@keyframes lightPulse {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
