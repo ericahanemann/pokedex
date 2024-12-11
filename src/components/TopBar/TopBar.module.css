@@ -1,9 +1,12 @@
 @import url("../../index.css");
 
 .topBarContainer {
+  position: fixed;
+  top: 0;
   width: 100vw;
   height: 12vh;
   display: flex;
+  z-index: 100;
 }
 
 .firstRectangle {

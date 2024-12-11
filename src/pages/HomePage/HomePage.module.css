@@ -1,0 +1,38 @@
+@import url("../../index.css");
+
+.homePageContainer {
+  width: 80%;
+  margin: 12vh auto;
+}
+
+.titleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  margin: 3rem 0;
+}
+
+.iconTitleContainer {
+  height: 100px;
+  width: 100px;
+}
+
+.title {
+  text-transform: uppercase;
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 5rem;
+  letter-spacing: -0.6rem;
+}
+
+.pokemonList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
