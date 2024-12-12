@@ -3,10 +3,35 @@ import { NavLink } from "react-router";
 import Tilt from "react-parallax-tilt";
 import useData from "../../hooks/useData";
 import LoadingPage from "../../pages/LoadingPage/LoadingPage";
+import { BsFire, BsDropletFill, BsSnow2, BsBugFill } from "react-icons/bs";
+import { BiSolidLeaf, BiSolidBolt } from "react-icons/bi";
+import { FaFistRaised } from "react-icons/fa";
+import {
+  GiPoisonGas,
+  GiStoneSphere,
+  GiGroundbreaker,
+  GiLibertyWing,
+} from "react-icons/gi";
+import { RiBearSmileLine } from "react-icons/ri";
 import styles from "./PokemonListItem.module.css";
 
 export default function PokemonListItem({ pokemon }) {
   const { pokemonRequired, getPokemonByName, isLoading } = useData();
+
+  const pokemonTypesIcons = {
+    GRASS: <BiSolidLeaf className={styles.cardType} />,
+    FIRE: <BsFire className={styles.cardType} />,
+    WATER: <BsDropletFill className={styles.cardType} />,
+    ELECTRIC: <BiSolidBolt className={styles.cardType} />,
+    SNOW: <BsSnow2 className={styles.cardType} />,
+    FIGHTING: <FaFistRaised className={styles.cardType} />,
+    POISON: <GiPoisonGas className={styles.cardType} />,
+    GROUND: <GiGroundbreaker className={styles.cardType} />,
+    ROCK: <GiStoneSphere className={styles.cardType} />,
+    BUG: <BsBugFill className={styles.cardType} />,
+    FLYING: <GiLibertyWing className={styles.cardType} />,
+    NORMAL: <RiBearSmileLine className={styles.cardType} />,
+  };
 
   useEffect(() => {
     getPokemonByName(pokemon.name);
@@ -25,19 +50,26 @@ export default function PokemonListItem({ pokemon }) {
       glarePosition="all"
       glareBorderRadius="10px"
     >
-      {" "}
       <NavLink
         to={`/pokemon/${pokemonRequired.name}`}
+        id={styles[pokemonRequired.types[0].type.name.toLocaleLowerCase()]}
         className={styles.cardItem}
       >
+        {
+          pokemonTypesIcons[
+            pokemonRequired.types[0].type.name.toLocaleUpperCase()
+          ]
+        }
+
         <div className={styles.cardImg}>
           <img
             src={pokemonRequired.sprites.other.dream_world.front_default}
             alt=""
           />
         </div>
-
-        <h4 className={styles.cardTitle}>{pokemonRequired.name}</h4>
+        <h4 className={`${styles.cardTitle} ${styles.cardText}`}>
+          {pokemonRequired.name}
+        </h4>
       </NavLink>
     </Tilt>
   );

@@ -6,6 +6,16 @@
   --highlights-shadow-color: #b6b6b68c;
   --light-effect-color: #fff;
   --light-effect-shadow-color: #ffffff7a;
+  --grass-type-color: #00a600;
+  --grass-type-highlights-color: #24de24;
+  --fire-type-color: #c20000;
+  --fire-type-highlights-color: #ff3e3e;
+  --water-type-color: #0070a8;
+  --water-type-highlights-color: #2eaded;
+  --bug-type-color: #3d7927;
+  --bug-type-highlights-color: #66b54a;
+  --normal-type-color: #5a5a5a;
+  --normal-type-highlights-color: #a9a9a9;
 }
 
 * {
@@ -13,5 +23,4 @@
   margin: 0;
   padding: 0;
   background-color: var(--primary-color);
-  color: var(--secondary-color);
 }
