@@ -1,10 +1,9 @@
-import { NavLink } from "react-router";
-import useData from "../../hooks/useData";
 import { useEffect, useState } from "react";
+import useData from "../../hooks/useData";
 import LoadingPage from "../LoadingPage/LoadingPage";
 import styles from "./HomePage.module.css";
-import PokeballIcon from "../../components/PokeballIcon/PokeballIcon";
 import PokemonListItem from "../../components/PokemonListItem/PokemonListItem";
+import PageTitle from "../../components/PageTitle/PageTitle";
 
 export default function HomePage() {
   const { pokemons, getPokemons, isLoading } = useData();
@@ -21,8 +20,8 @@ export default function HomePage() {
             <PokemonListItem
               key={index}
               pokemon={pokemon}
-              isActive={index === activePokemonIndex} 
-              onHover={() => setActivePokemonIndex(index)} 
+              isActive={index === activePokemonIndex}
+              onHover={() => setActivePokemonIndex(index)}
             />
           );
         })
@@ -33,12 +32,7 @@ export default function HomePage() {
   ) : (
     <main className={styles.homePageContainer}>
       <section>
-        <NavLink to="/" className={styles.titleContainer}>
-          <div className={styles.iconTitleContainer}>
-            <PokeballIcon />
-          </div>
-          <h1 className={styles.title}>pokedex</h1>
-        </NavLink>
+        <PageTitle />
 
         <div className={styles.pokemonList}>{renderedPokemons}</div>
       </section>

@@ -65,7 +65,7 @@ export default function PokemonListItem({ pokemon, isActive, onHover }) {
         <div className={styles.cardImg}>
           <img
             src={pokemonRequired.sprites.other.dream_world.front_default}
-            alt=""
+            alt={pokemonRequired.name}
           />
         </div>
         <h4 className={`${styles.cardTitle} ${styles.cardText}`}>
