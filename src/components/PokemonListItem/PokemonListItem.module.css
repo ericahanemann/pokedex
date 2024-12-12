@@ -16,6 +16,7 @@
   transition: all 0.2s;
 }
 
+.cardItem.active,
 .cardItem:hover {
   background-color: var(--card-bg-hover-color);
 }
@@ -32,18 +33,23 @@
   transition: all 0.2s;
 }
 
+#grass.active .cardType,
 #grass:hover .cardType {
   color: var(--grass-type-color);
 }
+#fire.active .cardType,
 #fire:hover .cardType {
   color: var(--fire-type-color);
 }
+#water.active .cardType,
 #water:hover .cardType {
   color: var(--water-type-color);
 }
+#bug.active .cardType,
 #bug:hover .cardType {
   color: var(--bug-type-color);
 }
+#normal.active .cardType,
 #normal:hover .cardType {
   color: var(--normal-type-color);
 }
@@ -67,6 +73,7 @@ img {
   transition: all 0.2s;
 }
 
+.cardItem.active img,
 .cardItem:hover img {
   filter: brightness(1);
 }
@@ -92,6 +99,7 @@ img {
   transition: all 0.2s;
 }
 
+.cardItem.active .cardText,
 .cardItem:hover .cardText {
   background-size: 200%;
   -webkit-text-fill-color: transparent;
@@ -100,6 +108,7 @@ img {
   animation: gradientAnimation 1s linear infinite;
 }
 
+#grass.active .cardText,
 #grass:hover .cardText {
   background-image: linear-gradient(
     45deg,
@@ -108,6 +117,7 @@ img {
     var(--grass-type-color)
   );
 }
+#fire.active .cardText,
 #fire:hover .cardText {
   background-image: linear-gradient(
     45deg,
@@ -116,6 +126,7 @@ img {
     var(--fire-type-color)
   );
 }
+#water.active .cardText,
 #water:hover .cardText {
   background-image: linear-gradient(
     45deg,
@@ -124,6 +135,7 @@ img {
     var(--water-type-color)
   );
 }
+#bug.active .cardText,
 #bug:hover .cardText {
   background-image: linear-gradient(
     45deg,
@@ -132,6 +144,7 @@ img {
     var(--bug-type-color)
   );
 }
+#normal.active .cardText,
 #normal:hover .cardText {
   background-image: linear-gradient(
     45deg,

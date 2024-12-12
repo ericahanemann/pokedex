@@ -15,7 +15,7 @@ import {
 import { RiBearSmileLine } from "react-icons/ri";
 import styles from "./PokemonListItem.module.css";
 
-export default function PokemonListItem({ pokemon }) {
+export default function PokemonListItem({ pokemon, isActive, onHover }) {
   const { pokemonRequired, getPokemonByName, isLoading } = useData();
 
   const pokemonTypesIcons = {
@@ -53,7 +53,8 @@ export default function PokemonListItem({ pokemon }) {
       <NavLink
         to={`/pokemon/${pokemonRequired.name}`}
         id={styles[pokemonRequired.types[0].type.name.toLocaleLowerCase()]}
-        className={styles.cardItem}
+        className={`${styles.cardItem} ${isActive ? styles.active : ""}`}
+        onMouseEnter={onHover}
       >
         {
           pokemonTypesIcons[

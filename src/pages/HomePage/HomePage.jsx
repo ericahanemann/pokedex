@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 import useData from "../../hooks/useData";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import LoadingPage from "../LoadingPage/LoadingPage";
 import styles from "./HomePage.module.css";
 import PokeballIcon from "../../components/PokeballIcon/PokeballIcon";
@@ -8,6 +8,7 @@ import PokemonListItem from "../../components/PokemonListItem/PokemonListItem";
 
 export default function HomePage() {
   const { pokemons, getPokemons, isLoading } = useData();
+  const [activePokemonIndex, setActivePokemonIndex] = useState(0);
 
   useEffect(() => {
     getPokemons();
@@ -16,7 +17,14 @@ export default function HomePage() {
   const renderedPokemons =
     pokemons.length > 0
       ? pokemons.map((pokemon, index) => {
-          return <PokemonListItem key={index} pokemon={pokemon} />;
+          return (
+            <PokemonListItem
+              key={index}
+              pokemon={pokemon}
+              isActive={index === activePokemonIndex} 
+              onHover={() => setActivePokemonIndex(index)} 
+            />
+          );
         })
       : [];
 
