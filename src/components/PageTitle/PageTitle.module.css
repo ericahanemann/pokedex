@@ -5,7 +5,7 @@
   align-items: center;
   gap: 1rem;
   text-decoration: none;
-  margin: 3rem 0 4rem 0;
+  margin: 9rem 0 5rem 0;
 }
 
 .iconTitleContainer {
@@ -22,4 +22,34 @@
   font-size: 5rem;
   letter-spacing: -0.6rem;
   color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .iconTitleContainer {
+    height: 80px;
+    width: 80px;
+  }
+  .title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 525px) {
+  .iconTitleContainer {
+    height: 60px;
+    width: 60px;
+  }
+  .title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .iconTitleContainer {
+    height: 55px;
+    width: 55px;
+  }
+  .title {
+    font-size: 3rem;
+  }
 }

@@ -8,6 +8,28 @@
 .pokemonList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1rem;
+}
+
+@media (max-width: 1440px) {
+  .homePageContainer {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .homePageContainer {
+    width: 90%;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .homePageContainer {
+    width: 100%;
+  }
+  .pokemonList {
+    gap: 2rem;
+  }
 }

@@ -162,3 +162,31 @@
     background-position: 200%;
   }
 }
+
+@media (max-width: 768px) {
+  .cardItem {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 668px) {
+  .cardItem {
+    width: 400px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 425px) {
+  .cardItem {
+    width: 350px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 375px) {
+  .cardItem {
+    width: 300px;
+    height: 400px;
+  }
+}

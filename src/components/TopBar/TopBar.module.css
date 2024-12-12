@@ -108,3 +108,95 @@
     box-shadow: none;
   }
 }
+
+@media (max-width: 250px) {
+  .smallLightsContainer {
+    left: 90%;
+  }
+}
+
+@media (max-width: 1950px) {
+  .smallLightsContainer {
+    left: 100%;
+  }
+  .secondRectangle {
+    width: 8vw;
+  }
+}
+
+@media (max-width: 1750px) {
+  .smallLightsContainer {
+    left: 150%;
+  }
+  .secondRectangle {
+    width: 10vw;
+  }
+}
+
+@media (max-width: 1250px) {
+  .smallLightsContainer {
+    left: 180%;
+  }
+  .secondRectangle {
+    transform: skewX(-40deg) translateX(-50%);
+  }
+}
+
+@media (max-width: 1080px) {
+  .firstRectangle {
+    width: 10vw;
+  }
+  .secondRectangle {
+    width: 24vw;
+  }
+  .thirdRectangle::after {
+    width: 30%;
+    left: -25%;
+  }
+  .smallLightsContainer {
+    left: 220%;
+  }
+}
+
+@media (max-width: 820px) {
+  .firstRectangle {
+    width: 16vw;
+  }
+  .secondRectangle {
+    width: 28vw;
+  }
+  .smallLightsContainer {
+    left: 130%;
+  }
+}
+
+@media (max-width: 600px) {
+  .firstRectangle {
+    width: 16vw;
+  }
+  .bigLight {
+    width: 6vh;
+    height: 6vh;
+  }
+  .secondRectangle {
+    width: 40vw;
+  }
+  .smallLightsContainer {
+    left: 150%;
+  }
+}
+
+@media (max-width: 450px) {
+  .smallLightsContainer {
+    left: 190%;
+  }
+}
+
+@media (max-width: 375px) {
+  .firstRectangle {
+    width: 20vw;
+  }
+  .secondRectangle {
+    width: 50vw;
+  }
+}
