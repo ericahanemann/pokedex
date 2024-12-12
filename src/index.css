@@ -26,3 +26,8 @@
   padding: 0;
   background-color: var(--primary-color);
 }
+
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}

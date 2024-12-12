@@ -7,9 +7,18 @@ export default function TopBar() {
         <div className={styles.bigLight}></div>
 
         <div className={styles.smallLightsContainer}>
-          <div className={styles.smallLightsItem}></div>
-          <div className={styles.smallLightsItem}></div>
-          <div className={styles.smallLightsItem}></div>
+          <div
+            id={styles.smallLightOne}
+            className={styles.smallLightsItem}
+          ></div>
+          <div
+            id={styles.smallLightTwo}
+            className={styles.smallLightsItem}
+          ></div>
+          <div
+            id={styles.smallLightThree}
+            className={styles.smallLightsItem}
+          ></div>
         </div>
       </div>
       <div className={styles.secondRectangle}></div>
