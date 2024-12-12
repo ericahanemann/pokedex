@@ -71,7 +71,7 @@
 
   transition: all 0.25s;
   transform: translateX(-50%) translateY(-50%);
-  animation: lightPulse 4s infinite;
+  animation: lightPulse 12s infinite;
 }
 
 .internalCircle:hover::after {
@@ -92,19 +92,19 @@
   0% {
     opacity: 0;
   }
-  20% {
+  40% {
     opacity: 0;
   }
-  40% {
+  45% {
     opacity: 1;
   }
   50% {
     opacity: 1;
   }
-  60% {
+  55% {
     opacity: 1;
   }
-  90% {
+  60% {
     opacity: 0;
   }
   100% {

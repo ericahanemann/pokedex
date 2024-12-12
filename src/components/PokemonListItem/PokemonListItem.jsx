@@ -40,16 +40,7 @@ export default function PokemonListItem({ pokemon, isActive, onHover }) {
   return isLoading ? (
     <LoadingPage />
   ) : (
-    <Tilt
-      tiltReverse={true}
-      tiltMaxAngleX={6}
-      tiltMaxAngleY={5}
-      scale={1.02}
-      glareMaxOpacity={0.2}
-      glareColor="#919191"
-      glarePosition="all"
-      glareBorderRadius="10px"
-    >
+    <Tilt tiltReverse={true} tiltMaxAngleX={6} tiltMaxAngleY={5} scale={1.02}>
       <NavLink
         to={`/pokemon/${pokemonRequired.name}`}
         id={styles[pokemonRequired.types[0].type.name.toLocaleLowerCase()]}
