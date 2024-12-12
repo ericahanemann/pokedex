@@ -3,7 +3,7 @@
   --primary-color: #f0f0f0;
   --secondary-color: #000;
   --highlights-color: #b6b6b6;
-  --highlights-shadow-color: #b6b6b68c;
+  --highlights-shadow-color: #b6b6b656;
   --light-effect-color: #fff;
   --light-effect-shadow-color: #ffffff7a;
   --card-bg-color: #dadada;
@@ -25,6 +25,7 @@
   margin: 0;
   padding: 0;
   background-color: var(--primary-color);
+  scrollbar-width: thin;
 }
 
 ::selection {

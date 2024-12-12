@@ -1,0 +1,23 @@
+@import url("../../index.css");
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-color);
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  color: var(--highlights-color);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.footerContainer {
+  border-top: 1px solid var(--transparent-primary-color);
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}

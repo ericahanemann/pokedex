@@ -8,7 +8,7 @@ export default function PageTitle() {
       <div className={styles.iconTitleContainer}>
         <PokeballIcon />
       </div>
-      <h1 className={styles.title}>pokedex</h1>
+      <h1 className={styles.title}>pokédex</h1>
     </NavLink>
   );
 }
