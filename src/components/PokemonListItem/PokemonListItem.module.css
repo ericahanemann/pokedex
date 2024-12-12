@@ -11,13 +11,13 @@
   gap: 1rem;
   border-radius: 0.8rem;
   padding: 1rem;
-  background-color: #dadada;
+  background-color: var(--card-bg-color);
 
   transition: all 0.2s;
 }
 
 .cardItem:hover {
-  background-color: #e9e9e9de;
+  background-color: var(--card-bg-hover-color);
 }
 
 .cardType {
