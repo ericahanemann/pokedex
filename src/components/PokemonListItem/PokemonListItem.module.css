@@ -167,6 +167,88 @@
   .cardItem {
     width: 300px;
     height: 300px;
+    background-color: var(--card-bg-hover-color);
+  }
+
+  #grass .cardType,
+  #grass .cardType {
+    color: var(--grass-type-color);
+  }
+  #fire .cardType,
+  #fire .cardType {
+    color: var(--fire-type-color);
+  }
+  #water.cardType,
+  #water.cardType {
+    color: var(--water-type-color);
+  }
+  #bug .cardType,
+  #bug .cardType {
+    color: var(--bug-type-color);
+  }
+  #normal .cardType,
+  #normal .cardType {
+    color: var(--normal-type-color);
+  }
+
+  .cardItem img,
+  .cardItem img {
+    filter: brightness(1);
+  }
+
+  .cardItem .cardText,
+  .cardItem .cardText {
+    background-size: 200%;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    animation: gradientAnimation 1s linear infinite;
+  }
+
+  #grass .cardText,
+  #grass .cardText {
+    background-image: linear-gradient(
+      45deg,
+      var(--grass-type-color),
+      var(--grass-type-highlights-color),
+      var(--grass-type-color)
+    );
+  }
+  #fire .cardText,
+  #fire .cardText {
+    background-image: linear-gradient(
+      45deg,
+      var(--fire-type-color),
+      var(--fire-type-highlights-color),
+      var(--fire-type-color)
+    );
+  }
+  #water .cardText,
+  #water .cardText {
+    background-image: linear-gradient(
+      45deg,
+      var(--water-type-color),
+      var(--water-type-highlights-color),
+      var(--water-type-color)
+    );
+  }
+  #bug .cardText,
+  #bug .cardText {
+    background-image: linear-gradient(
+      45deg,
+      var(--bug-type-color),
+      var(--bug-type-highlights-color),
+      var(--bug-type-color)
+    );
+  }
+  #normal .cardText,
+  #normal .cardText {
+    background-image: linear-gradient(
+      45deg,
+      var(--normal-type-color),
+      var(--normal-type-highlights-color),
+      var(--normal-type-color)
+    );
   }
 }
 
