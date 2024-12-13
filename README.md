@@ -6,7 +6,7 @@ An app developed for a technical interview at Reverbs. The app connects to the [
   <a href="#layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#installation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="https://" target="_blank">Live Demo</a>
+  <a href="https://pokedex-eh.vercel.app/" target="_blank">Live Demo</a>
 </p>
 
 ## Layout
@@ -61,6 +61,6 @@ This project was developed using the following technologies and libraries:
 ## Live Demo
 
 Check out the live version of the project here:
-[**Live Demo**](https://)
+[**Live Demo**](https://pokedex-eh.vercel.app/)
 
 
