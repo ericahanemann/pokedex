@@ -2,8 +2,8 @@
 
 .cardItem {
   position: relative;
-  width: 250px;
-  height: 300px;
+  width: 300px;
+  height: 350px;
   text-decoration: none;
   display: flex;
   flex-direction: column;

@@ -1,11 +1,12 @@
 import { useEffect } from "react";
-import { useParams } from "react-router";
+import { NavLink, useParams } from "react-router";
 import useData from "../../hooks/useData";
 import LoadingPage from "../LoadingPage/LoadingPage";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import { BsFire, BsDropletFill, BsSnow2, BsBugFill } from "react-icons/bs";
 import { BiSolidLeaf, BiSolidBolt } from "react-icons/bi";
 import { FaFistRaised } from "react-icons/fa";
+import { TbArrowBigLeftLineFilled } from "react-icons/tb";
 import {
   GiPoisonGas,
   GiStoneSphere,
@@ -100,15 +101,28 @@ export default function Pokemon() {
           </div>
         </div>
         <div className={styles.pokemonDataInfo}>
-          <div className={styles.pokemonTypes}>{renderedPokemonTypes}</div>
           <div
-            id={styles[pokemonRequired.types[0].type.name.toLocaleLowerCase()]}
-            className={styles.pokemonStats}
+            className={`${
+              styles[pokemonRequired.types[0].type.name.toLocaleLowerCase()]
+            } ${styles.pokemonTypes}`}
+          >
+            {renderedPokemonTypes}
+          </div>
+          <div
+            className={`${
+              styles[pokemonRequired.types[0].type.name.toLocaleLowerCase()]
+            } ${styles.pokemonStats}`}
           >
             {renderedPokemonStats}
           </div>
         </div>
       </section>
+
+      <NavLink to="/" className={styles.goBackButton}>
+        <TbArrowBigLeftLineFilled
+          className={styles.goBackIcon}
+        ></TbArrowBigLeftLineFilled>
+      </NavLink>
     </main>
   );
 }
